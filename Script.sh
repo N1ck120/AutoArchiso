@@ -7,7 +7,7 @@ else
 fi
 
 if ! pacman -Qi archiso > /dev/null 2>/dev/null; then
-    yes|LC_ALL=en_US.UTF-8 sudo pacman -S archiso
+    sudo pacman -S --noconfirm archiso 
 fi
 echo -e "Select device\n"
 lsblk -dmo NAME,SIZE,MODEL,MOUNTPOINT  | grep sd | grep -v $(mount | grep 'on / ' | cut -d' ' -f1 | sed 's/[0-9]*$//')
