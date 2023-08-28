@@ -21,7 +21,7 @@ sudo mkarchiso -v -w /tmp/archiso-tmp -o $home_dir/archiso/ /usr/share/archiso/c
 
 cd $home_dir/archiso/
 
-mv archlinux-"$(date +%Y.%m.%d)"-x86_64.iso arch.iso
+mv * arch.iso
 
 dd bs=4M if=$home_dir/archiso/arch.iso of=/dev/$usbdrive conv=fsync oflag=direct status=progress
 
