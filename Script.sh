@@ -17,6 +17,8 @@ echo "Select the desired unit ex: sdb"
 
 read usbdrive
 
+mkdir $home_dir/archiso/
+
 sudo mkarchiso -v -w /tmp/archiso-tmp -o $home_dir/archiso/ /usr/share/archiso/configs/releng/
 
 cd $home_dir/archiso/
